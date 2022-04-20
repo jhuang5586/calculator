@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.screen {
+  grid-area: screen;
+  height: 80px;
+  background: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  text-align: right;
+  font-size: xx-large;
+  font-family: Helvetica, sans-serif;
+  padding: 5px;
+}
+
+.num1 {
+  /* background: pink; */
+}
+
+.num2 {
+  /* background: greenyellow; */
+}
+
+.operate {
+  /* background: blueviolet; */
+}
+.result {
+  /* background-color: rgb(213, 188, 193); */
+}
+
+.btn {
+  height: 50px;
+  border-radius: 5px;
+  background-color: white;
+  border: 1px solid black;
+}
+
+.clear-btn {
+  grid-area: clear;
+}
+
+.delete-btn {
+  grid-area: delete;
+}
+
+.shell {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 75px 75px 75px 75px;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "screen screen screen screen"
+    "clear clear delete delete"
+    "keypad keypad keypad keypad";
+  border: 1px solid black;
+  background-color: #0af7eb;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.keypad-container {
+  grid-area: keypad;
+  gap: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.keypad-container button {
+  height: 50px;
+  font-size: large;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+}

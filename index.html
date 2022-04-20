@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="script.js" defer></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Calculator</title>
+  </head>
+  <body>
+    <div class="shell" id="shell">
+      <div class="screen" id="screen">
+        <span class="num1" id="num1"></span>
+        <span class="operate" id="operate"></span>
+        <span class="num2" id="num2"></span>
+        <div class="result" id="result"></div>
+      </div>
+      <button class="btn clear-btn" id="clear" data-type="action">CLEAR</button>
+      <button class="btn delete-btn" id="delete" data-type="action">
+        DELETE
+      </button>
+      <div class="keypad-container">
+        <button class="btn number" id="7" data-type="number">7</button>
+        <button class="btn number" id="8" data-type="number">8</button>
+        <button class="btn number" id="9" data-type="number">9</button>
+        <button class="btn" id="/" data-type="operator">/</button>
+        <button class="btn number" id="4" data-type="number">4</button>
+        <button class="btn number" id="5" data-type="number">5</button>
+        <button class="btn number" id="6" data-type="number">6</button>
+        <button class="btn" id="*" data-type="operator">x</button>
+        <button class="btn number" id="1" data-type="number">1</button>
+        <button class="btn number" id="2" data-type="number">2</button>
+        <button class="btn number" id="3" data-type="number">3</button>
+        <button class="btn" id="-" data-type="operator">-</button>
+        <button class="btn" id="." data-type="action">.</button>
+        <button class="btn number" id="0" data-type="number">0</button>
+        <button class="btn" id="=" data-type="action">=</button>
+        <button class="btn" id="+" data-type="operator">+</button>
+      </div>
+    </div>
+  </body>
+</html>
