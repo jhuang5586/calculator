@@ -16,7 +16,14 @@ function handleClick(e) {
   const type = e.target.dataset.type;
   const id = e.target.id;
   if (type === "number") {
-    if (isNum1) {
+    if (resultDisplay.textContent != "") {
+      isNum1 = true;
+      num1.textContent = "";
+      num1.textContent += id;
+      num2.textContent = "";
+      resultDisplay.textContent = "";
+      operate.textContent = "";
+    } else if (isNum1) {
       num1.textContent += id;
     } else {
       num2.textContent += id;
@@ -90,17 +97,24 @@ function handleClick(e) {
     }
     resultDisplay.textContent = result;
   }
+  if (id === ".") {
+    if (isNum1) {
+      num1.textContent += id;
+    } else {
+      num2.textContent += id;
+    }
+  }
 }
 
 function add(num1, num2) {
-  return parseInt(num1) + parseInt(num2);
+  return Math.round(1000 * (parseFloat(num1) + parseFloat(num2))) / 1000;
 }
 function subtract(num1, num2) {
-  return parseInt(num1) - parseInt(num2);
+  return Math.round(1000 * (parseFloat(num1) - parseFloat(num2))) / 1000;
 }
 function divide(num1, num2) {
-  return Math.round(1000 * (parseInt(num1) / parseInt(num2))) / 1000;
+  return Math.round(1000 * (parseFloat(num1) / parseFloat(num2))) / 1000;
 }
 function multiply(num1, num2) {
-  return Math.round(1000 * (parseInt(num1) * parseInt(num2))) / 1000;
+  return Math.round(1000 * (parseFloat(num1) * parseFloat(num2))) / 1000;
 }
