@@ -34,6 +34,9 @@ function handleKeyDown(e) {
   if (id === "Backspace") {
     id = "delete";
   }
+  if (id === "Enter") {
+    id = "=";
+  }
   calculate(type, id);
 }
 
@@ -43,6 +46,7 @@ function handleClick(e) {
   calculate(type, id);
 }
 
+//HELPER FUNCTIONS
 function add(num1, num2) {
   return Math.round(1000 * (parseFloat(num1) + parseFloat(num2))) / 1000;
 }
